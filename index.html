@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remember JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav id="navbar">
+    <header></header>
+        <ul class="nav">
+            <li><h1>Things I should remember about Javascript</h1></li>
+            <li class="navbutton"> <a class="nav-link" href="#Functions">Functions</a></li>
+            <li class="navbutton"><a class="nav-link" href="#Array_Methods"> Array Methods</a></li>
+            <li class="navbutton"><a class="nav-link" href="#Possible_Expansion">Possible Expansion</a></li>
+            <li class="navbutton"><a class="nav-link" href="#Future">Future</a></li>
+            <li class="navbutton"><a class="nav-link" href="#Credits">Credits</a></li>
+        </ul>
+
+
+
+</nav>
+<main id="main-doc">
+    <section class="main-section" id="Functions">
+        <header><h3>Functions</h3></header>
+        <p>Every function in JavaScript is a Function object.</p>
+        <p>To return a value other than the default, a function must have a return statement that specifies the value to return. A function without a return statement will return a default value.</p>
+        <br>
+        <p class="sub">For Example:</p>
+        <code>/* Declare the function 'myFunc' */<br>
+            function myFunc(theObject) {<br>
+            theObject.brand = "Toyota";<br>
+            }<br>
+
+            /*<br>
+            * Declare variable 'mycar';<br>
+            * create and initialize a new Object;<br>
+            * assign reference to it to 'mycar'<br>
+            */<br>
+            var mycar = {<br>
+            brand: "Honda",<br>
+            model: "Accord",<br>
+            year: 1998<br>
+            };<br>
+
+            /* Logs 'Honda' */<br>
+            console.log(mycar.brand);<br>
+
+            /* Pass object reference to the function */<br>
+            myFunc(mycar);<br>
+
+            /*
+            * Logs 'Toyota' as the value of the 'brand' property<br>
+            * of the object, as changed to by the function.<br>
+            */<br>
+            console.log(mycar.brand);<br></code>
+        <ul>
+            <Li>Ways To Declare Functions</Li>
+            <li>Arrow Functions <code>([param[, param]]) => {<br>
+                statements<br>
+                }
+
+                param => expression<br></code></li>
+            <li>Function Declaration <code><br>
+                function name([param[, param[, ... param]]]) {<br>
+                statements<br>
+                }
+            </code></li>
+            <li>Function Expressions <br>
+                <code>function [name]([param[, param[, ... param]]]) {<br>
+                statements<br>
+                }</code></li>
+            <li>More ways to do it but they are out of the area of expertise of this guide </li>
+        </ul>
+    </section>
+    <section class="main-section" id="Array_Methods">
+        <header><h3>Array Methods</h3></header>
+        <p>The JavaScript Array object is a global object that is used in the construction of arrays; which are high-level, list-like objects.</p>
+        <p>These are some functions that act on arrays which can be used to create complex functions.</p>
+        <p class="sub">For Example:</p>
+        <code>let arr = [2,2,3,5,2,5,6,1,2];
+            arr.reduce((a,b) => a + b)
+        //sum all values in array
+        </code>
+        <ul>
+            <li>Find() method returns value of first element to satisfy testing function <code>
+                var array1 = [5, 12, 8, 130, 44];<br>
+
+                var found = array1.find(function(element) {<br>
+                return element > 10;<br>
+                });<br>
+
+                console.log(found);
+                // expected output: 12
+
+            </code></li>
+            <li>Filter() method makes a new array with elements that pass the function test <br>
+                <code>
+                var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];<br>
+
+                const result = words.filter(word => word.length > 6);<br>
+
+                console.log(result);<br>
+                // expected output: Array ["exuberant", "destruction", "present"]
+
+            </code></li>
+            <li>Map() is a method used to make an array after a function has worked on all of the elements in it <br><code>
+                var array1 = [1, 4, 9, 16];<br>
+
+                // pass a function to map<br>
+                const map1 = array1.map(x => x * 2);<br>
+
+                console.log(map1);<br>
+                // expected output: Array [2, 8, 18, 32]<br>
+            </code></li>
+            <li>Apply a function over all elements and accumulate the return results to be returned as one value <br> <code>
+                const array1 = [1, 2, 3, 4];<br>
+                const reducer = (accumulator, currentValue) => accumulator + currentValue;<br>
+
+                // 1 + 2 + 3 + 4<br>
+                console.log(array1.reduce(reducer));<br>
+                // expected output: 10<br>
+
+            </code></li>
+            <li>forEach() method applies a function once on each array element.</li>
+        </ul>
+    </section>
+    <section class="main-section" id="Possible_Expansion">
+        <header><h3>Possible Expansion</h3></header>
+        <p>This is a sample project for freeCodeCamp.</p>
+
+
+
+    </section>
+    <section class="main-section" id="Future">
+        <header><h3>Future</h3></header>
+        <p>After I complete the courses I may upgrade this website to autogenerated pages.</p>
+    </section>
+    <section class="main-section" id="Credits">
+        <header><h3>Credits</h3></header>
+
+        <p>Developed for FCC using MDN Web Docs</p>
+        <p>2018</p>
+    </section>
+
+    <footer>
+        <p>Source information used about Javascript provided directly from MDN Web Docs</p>
+    </footer>
+
+</main>
+
+
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
